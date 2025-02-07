@@ -1,11 +1,14 @@
-import React from 'react'
-import { Button } from '@/components/ui/button'
-const Home = () => {
-  return (
-    <div>Home
-      <Button>Hello</Button>
-    </div>
-  )
-}
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-export default Home
+const Home = () => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/dashboard');
+  }, [router]);
+
+  return null;
+};
+
+export default Home;
